@@ -31,7 +31,7 @@ h1{
 	display:inline-block;
 	position: absolute;
 	visibility: hidden;
-	background: #F9A91A;
+	background: rgba(222, 153, 32, 0.6);
 	opacity: 0.6;	
 	top:0 ;
 	right: 0;
@@ -45,7 +45,7 @@ span{
 	visibility: hidden;
 	position: absolute;
 	top:40%;	
-	left: 20%;
+	left: 25%;
 	font-size: 24px;
 	font-weight: bold;
 	color:white;
