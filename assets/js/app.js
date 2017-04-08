@@ -24,7 +24,7 @@ window.addEventListener('load', function(){
 						{name:"Erika Vidal", url:"25.png"},
 						{name:"Katherine Ortega", url:"26.png"},
 						{name:"Brilly Majuan", url:"27.png"},
-						{name:"Flor de Cantuta Tello", url:"28.png"},
+						{name:"Flor de cantuta Tello", url:"28.png"},
 						{name:"Leslie Avendaño", url:"29.png"},
 						{name:"Cindy Mendoza", url:"30.png"},
 						{name:"Annia Flores", url:"31.png"},
@@ -44,7 +44,7 @@ window.addEventListener('load', function(){
 						{name:"Liliana Peña", url:"45.png"},
 						{name:"Ruth Salvador", url:"46.png"},
 						{name:"Wendy Reyes", url:"48.png"},
-						{name:"Maria Grecia Cutipa", url:"50.png"},
+						{name:"Maria Grecia", url:"50.png"},
 						{name:"Ana Durand", url:"51.png"},
 						{name:"Glisse Jorge", url:"52.png"},
 						{name:"Neiza Nuñez", url:"53.png"},
@@ -72,4 +72,30 @@ window.addEventListener('load', function(){
 	}
 	document.getElementById("contenido").appendChild(documentFragment);
 	
+});
+
+var anclaMenu = document.getElementById("toggle");
+anclaMenu.addEventListener('click',function(e){
+	e.preventDefault();
+	document.getElementById("nav-header").classList.toggle("open");
+	document.body.classList.toggle("overflow-hidden");
+});
+
+var lastScroll = 0;
+window.addEventListener('scroll', function(){
+	var scrollNumber = window.pageYOffset || document.body.scrollTop;
+	console.log(scrollNumber);
+		if(scrollNumber>lastScroll){
+			document.getElementById("nav-header").classList.remove("header-in");
+			document.getElementById("nav-header").style.opacity = 0;
+			console.log("arriba");
+		}else{
+			document.getElementById("nav-header").classList.add("header-in");
+			document.getElementById("nav-header").style.opacity = 1;
+			console.log("abajo");
+			if(scrollNumber<=3){
+				document.getElementById("nav-header").classList.remove("header-in");
+				document.getElementById("nav-header").style.opacity = 1;
+			}
+		}
 });
